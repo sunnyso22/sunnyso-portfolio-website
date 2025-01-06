@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <StairTransition />
+        {/* <StairTransition /> */}
         <PageTransition>
           {children}
         </PageTransition>
