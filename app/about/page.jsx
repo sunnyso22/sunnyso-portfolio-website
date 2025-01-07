@@ -5,7 +5,7 @@ import { SiTailwindcss, SiNextdotjs, SiMysql, SiOracle } from "react-icons/si"
 
 const about = {
     title: "About me",
-    description: "Hi, my name is SO Hiu Tung, or you can call me Sunny. I am a web developer, solution analyst, software engineer with 3+ years experience based in Hong Kong.",
+    description: "Hi, my name is SO Hiu Tung, or you can call me Sunny. I am a web developer, solution analyst with 3+ years experience based in Hong Kong. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.",
     info: [
         {
             fieldName: "Name",
@@ -121,7 +121,7 @@ const About = () => {
             initial={{opacity: 0}}
             animate={{
                 opacity: 1,
-                transition: {delay: 1, duration: 0.4, ease: "easeIn"}
+                transition: {delay: 0.5, duration: 0.5, ease: "easeIn"}
             }}
             className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
         >
@@ -138,7 +138,7 @@ const About = () => {
                     </TabsList>
 
                     {/* content */}
-                    <div className="min-h-[70vh] w-full">
+                    <div className="min-h-[80vh] w-full">
                         {/* about */}
                         <TabsContent value="about" className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">

@@ -40,9 +40,9 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {/* <StairTransition /> */}
-        <PageTransition>
-          {children}
-        </PageTransition>
+        {/* <PageTransition> */}
+        {children}
+        {/* </PageTransition> */}
       </body>
     </html>
   );

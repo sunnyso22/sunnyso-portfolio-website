@@ -28,6 +28,7 @@
     "react-icons": "^5.4.0",
     "react-type-animation": "^3.2.0",
     "resend": "^4.0.1-alpha.0",
+    "swiper": "^11.2.0",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7"
   },

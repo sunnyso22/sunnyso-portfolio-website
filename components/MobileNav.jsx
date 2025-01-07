@@ -1,7 +1,7 @@
 "use client"
 
 import { usePathname } from "next/navigation"
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet"
 import Link from "next/link"
 import { Bars3Icon } from '@heroicons/react/24/solid'
 
@@ -34,6 +34,7 @@ const MobileNav = () => {
                 <Bars3Icon className="w-10 text-accent" />
             </SheetTrigger>
             <SheetContent className="flex flex-col">
+                <SheetTitle className="hidden">Menu</SheetTitle>
                 {/* logo */}
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/">
