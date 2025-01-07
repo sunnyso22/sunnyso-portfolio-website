@@ -1,9 +1,11 @@
 "use client"
 
-import { usePathname } from "next/navigation"
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "./ui/sheet"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger, SheetClose } from "./ui/sheet"
 import { Bars3Icon } from '@heroicons/react/24/solid'
+import { motion } from "framer-motion"
+
 
 const links = [
     {
@@ -28,6 +30,11 @@ const MobileNav = () => {
 
     const pathname = usePathname()
 
+    const variants = { 
+        default: {width: 0}, 
+        active: {width: "calc(100% - 0.75rem)"} 
+    }
+
     return (
         <Sheet>
             <SheetTrigger>
@@ -47,14 +54,19 @@ const MobileNav = () => {
                 <nav className="flex flex-col justify-center items-center gap-8">
                     {
                         links.map((link, index) => 
-                            (
+                            (                              
                                 <Link 
                                     href={link.path} 
                                     key={index} 
-                                    className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}
+                                    className={`${link.path === pathname && "text-accent"} font-medium hover:text-accent transition-all`}
                                 >
                                     {link.name}
-                                </Link>
+                                    <motion.div 
+                                        variants={variants}
+                                        animate={link.path === pathname ? "acitve" : "default"}
+                                        className="border-b-2 border-accent"
+                                    />
+                                </Link>            
                             )
                         )
                     }

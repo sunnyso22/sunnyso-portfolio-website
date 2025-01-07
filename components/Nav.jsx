@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { motion } from "framer-motion"
 
 const links = [
     {
@@ -27,17 +28,27 @@ const Nav = () => {
 
     const pathname = usePathname()
 
+    const variants = { 
+        default: {width: 0}, 
+        active: {width: "calc(100% - 0.75rem)"} 
+    }
+
     return (
         <nav className="flex gap-8">
             {   
                 links.map((link, index) => 
                     (
                         <Link 
-                            href={link.path} 
                             key={index} 
-                            className={`${link.path === pathname && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transition-all`}
-                            >
+                            href={link.path} 
+                            className={`${link.path === pathname && "text-accent"} font-medium hover:text-accent transition-all`}
+                        >
                             {link.name}
+                            <motion.div 
+                                variants={variants}
+                                animate={link.path === pathname ? "acitve" : "default"}
+                                className="border-b-2 border-accent"
+                            />
                         </Link>
                     )
                 )
