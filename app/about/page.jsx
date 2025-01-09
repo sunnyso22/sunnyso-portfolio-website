@@ -5,7 +5,7 @@ import { SiTailwindcss, SiNextdotjs, SiMysql, SiOracle } from "react-icons/si"
 
 const about = {
     title: "About me",
-    description: "Hi, my name is SO Hiu Tung, or you can call me Sunny. I am a web developer, solution analyst with 3+ years experience based in Hong Kong. I am a quick learner and I am always looking to expand my knowledge and skill set. I am a team player and I am excited to work with others to create amazing applications.",
+    description: "Hi, my name is SO Hiu Tung, you can simply call me Sunny. I am a web developer and solution analyst with over 3 years of experience, based in Hong Kong. As a quick learner, I am always eager to expand my knowledge and skill set. I thrive in collaborative environments and enjoy working with others to create innovative and impactful applications.",
     info: [
         {
             fieldName: "Name",
@@ -29,7 +29,7 @@ const about = {
 const experience = {
     icon: "",
     title: "My experience",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet. Sunt, temporibus ullam tempora voluptatem nulla quis?",
+    description: "I joined Cathay Dining, a subsidiary of Cathay Pacific Airways, as an IT Trainee in July 2021. In August 2023, following the reorganization of Cathay's subsidiary IT departments, I was promoted to the position of Solution Specialist at Cathay Pacific Airways. ",
     items: [
         {
             company: "Cathay Pacific Airways",
@@ -42,7 +42,7 @@ const experience = {
             duration: "2021Jul - 2023Jul"
         },
         {
-            company: "HKSAR OGCIO",
+            company: "Office of the Government Chief Information Officer (OGCIO)",
             position: "Intern",
             duration: "2020Jul - 2020Aug"
         },
@@ -52,7 +52,7 @@ const experience = {
 const education = {
     icon: "",
     title: "Education",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet. Sunt, temporibus ullam tempora voluptatem nulla quis?",
+    description: "Obtained the bachelor degree of Information Technology from The Hong Kong Polytechnic University in 2021.",
     items: [
         {
             institution: "The Hong Kong Polytechnic University",
@@ -69,11 +69,11 @@ const education = {
 
 const skills = {
     title: "My skills",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, amet. Sunt, temporibus ullam tempora voluptatem nulla quis?",
+    description: "",
     skillList: [
         {
             icon: <FaHtml5 />,
-            name: "HTML5"
+            name: "HTML"
         },
         {
             icon: <FaCss3 />,
@@ -93,7 +93,7 @@ const skills = {
         },
         {
             icon: <SiTailwindcss />,
-            name: "Tailwindcss"
+            name: "Tailwind CSS"
         },
         // {
         //     icon: <SiNextdotjs />,

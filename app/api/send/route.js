@@ -5,7 +5,7 @@ const fromEmail = process.env.FROM_EMAIL
 
 export async function POST(req) {
 
-    const { email, subject, message } = await req.json()
+    const { firstname, lastname, email, subject, message } = await req.json()
 
     try {
         const { data, error } = await resend.emails.send({
@@ -15,6 +15,7 @@ export async function POST(req) {
             subject: subject,
             react: (
                 <>
+                    <p>Dear {firstname} {lastname},</p>
                     <strong>Thank you for contacting me!</strong>
                     <p>New message submitted: </p>
                     <p>{message}</p>

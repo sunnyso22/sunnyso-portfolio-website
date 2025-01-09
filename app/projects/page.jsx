@@ -17,30 +17,21 @@ import WorkSliderBtns from "@/components/WorkSliderBtns"
 const projects = [
     {
         num: "01",
-        title: "frontend project",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem quibusdam alias ipsa sed cum quas voluptatem.",
-        stack: [{name: "HTML5"}, {name: "CSS3"}, {name: "JavaScript"}],
-        image: "/images/projects/testing.jpg",
-        live: "",
-        github: "",
+        title: "Weather App",
+        description: "A real-time weather app for people in Taiwan. Developed with React and styled-components. Built by Vite.",
+        stack: [{name: "Vite"}, {name: "React"}, {name: "styled-components"}],
+        image: "/images/projects/weather-app.png",
+        live: "https://sunnyso22.github.io/weather-app-vite/",
+        github: "https://github.com/sunnyso22/weather-app-vite",
     },
     {
         num: "02",
-        title: "fullstack project",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem quibusdam alias ipsa sed cum quas voluptatem.",
-        stack: [{name: "Next.js"}, {name: "Tailwindcss"}, {name: "Node.js"}],
-        image: "/images/projects/testing.jpg",
-        live: "",
-        github: "",
-    },
-    {
-        num: "03",
-        title: "e-commerce",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi rem quibusdam alias ipsa sed cum quas voluptatem.",
-        stack: [{name: "Next.js"}, {name: "Tailwindcss"}, {name: "Node.js"}],
-        image: "/images/projects/testing.jpg",
-        live: "",
-        github: "",
+        title: "Tailwind CSS Practice",
+        description: "Little project of creating calendar, progress bar, dark mode switch by Tailwind CSS.",
+        stack: [{name: "React"}, {name: "Tailwind CSS"}, ],
+        image: "/images/projects/tailwind.png",
+        live: "https://sunnyso22.github.io/vite-react-tailwind/",
+        github: "https://github.com/sunnyso22/vite-react-tailwind",
     },
 ]
 
@@ -79,8 +70,6 @@ const Projects = () => {
                                 {project.stack.map((item, index) => (
                                     <li key={index} className="text-xl text-accent">
                                         {item.name}
-                                        {/* add comma */}
-                                        {index !== project.stack.length - 1 && ","}
                                     </li>
                                 ))}
                             </ul>

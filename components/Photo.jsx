@@ -15,11 +15,11 @@ const Photo = () => {
                 className="w-full h-full relative"
             >
                 {/* image */}
+                
                 <div className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute">
-                    <Image 
-                        src="/images/hero-image.png" 
-                        priority 
-                        quality={100} 
+                    <Image
+                        src="/images/sunnyso.png"
+                        priority
                         fill
                         alt=""
                         className="object-contain"
