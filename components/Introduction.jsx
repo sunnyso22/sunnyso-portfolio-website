@@ -5,7 +5,7 @@ import { ArrowDownTrayIcon } from '@heroicons/react/24/solid'
 import { TypeAnimation } from 'react-type-animation'
 import { motion } from "framer-motion";
 
-// compoonents
+// components
 import Socials from "@/components/Socials";
 
 const Introduction = () => {

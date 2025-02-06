@@ -1,12 +1,4 @@
-import HeroSection from "./components-v01/HeroSection";
-import NavBar from "./components-v01/NavBar";
-import AboutSection from "./components-v01/AboutSection";
-import ProjectSection from "./components-v01/ProjectSection";
-import EmailSection from "./components-v01/EmailSection";
-import Footer from "./components-v01/Footer";
-import AchievementSection from "./components-v01/AchievementSection";
-
-// compoonents
+// components
 import Introduction from "@/components/Introduction";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
@@ -26,6 +18,7 @@ export default function Home() {
         //     <Footer/>
         // </main>
         
+        //v02
         <section className="h-full">
             <div className="container mx-auto h-full">
                 <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">

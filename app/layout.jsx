@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import { JetBrains_Mono } from "next/font/google"
+import { JetBrains_Mono, Caveat } from "next/font/google"
 
 // components
 import Header from "@/components/Header";
@@ -24,6 +24,12 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrainsMono"
 })
 
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-caveat"
+})
+
 export const metadata = {
   title: "Sunny So",
   description: "Sunny So Protfolio Website",
@@ -33,7 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       {/* <body
-        className={`${jetbrainsMono.variable}`}
+        className={`${caveat.variable}`}
       > */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
