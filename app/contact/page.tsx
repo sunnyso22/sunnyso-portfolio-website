@@ -31,40 +31,46 @@ const Contact = () => {
 
     const [emailSubmitted, setEmailSubmitted] = useState(false)
 
-    const handleSubmit = async(e) => {
-        e.preventDefault()
+    type FormData = {
+        firstname: string;
+        lastname: string;
+        email: string;
+        phone: string;
+        subject: string;
+        message: string;
+    }
 
-        const data = {
-            firstname: e.target.firstname.value,
-            lastname: e.target.lastname.value,
-            email: e.target.email.value,
-            phone: e.target.phone.value,
-            subject: e.target.subject.value,
-            message: e.target.message.value,
-        }
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+        e.preventDefault();
 
-        const JSONdata = JSON.stringify(data)
+        const data: FormData = {
+            firstname: e.currentTarget.firstname.value,
+            lastname: e.currentTarget.lastname.value,
+            email: e.currentTarget.email.value,
+            phone: e.currentTarget.phone.value,
+            subject: e.currentTarget.subject.value,
+            message: e.currentTarget.message.value,
+        };
 
-        const endpoint = "/api/send"
+        const JSONdata = JSON.stringify(data);
 
-        const options = {
+        const endpoint = "/api/send";
+
+        const options: RequestInit = {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSONdata,
-        }
+        };
 
-        await fetch(endpoint, options)
-            .then(
-                (response) => {
-                    if (response.status === 200) {
-                        console.log("Message sent.")
-                        setEmailSubmitted(true)
-                    }
-                }
-            )
-    }
+        await fetch(endpoint, options).then((response) => {
+            if (response.status === 200) {
+                console.log("Message sent.");
+                setEmailSubmitted(true);
+            }
+        });
+    };
 
 
     return (

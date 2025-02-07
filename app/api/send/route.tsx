@@ -1,3 +1,4 @@
+import React from 'react';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -7,20 +8,20 @@ export async function POST(req: Request) {
 
     const { firstname, lastname, email, subject, message }: { firstname: string, lastname: string, email: string, subject: string, message: string } = await req.json();
 
-    const messageBody = `
-        <p>Dear ${firstname} ${lastname},</p>
-        <strong>Thank you for contacting me!</strong>
-        <p>New message submitted: </p>
-        <p>${message}</p>
-    `;
-
     try {
         const { data, error } = await resend.emails.send({
             from: fromEmail,
             to: [email],
             bcc: ["sohiutung123456@yahoo.com.hk"],
             subject: subject,
-            react: messageBody,
+            react: (
+                <div>
+                    <p>Dear {firstname} {lastname},</p>
+                    <h1>Thank you for contacting me!</h1>
+                    <p>New message submitted: </p>
+                    <p>{message}</p>
+                </div>
+            ),
         });
 
         if (error) {
