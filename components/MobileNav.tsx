@@ -1,39 +1,43 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { Sheet, SheetContent, SheetTitle, SheetTrigger, SheetClose } from "./ui/sheet"
-import { Bars3Icon } from '@heroicons/react/24/solid'
-import { motion } from "framer-motion"
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+    Sheet,
+    SheetContent,
+    SheetTitle,
+    SheetTrigger,
+    SheetClose,
+} from "./ui/sheet";
+import { Bars3Icon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 
 const links = [
     {
         name: "Home",
-        path: "/"
+        path: "/",
     },
     {
         name: "About",
-        path: "/about"
+        path: "/about",
     },
     {
         name: "Projects",
-        path: "/projects"
+        path: "/projects",
     },
     {
         name: "Contact",
-        path: "/contact"
+        path: "/contact",
     },
-]
+];
 
 const MobileNav = () => {
+    const pathname = usePathname();
 
-    const pathname = usePathname()
-
-    const variants = { 
-        default: {width: 0}, 
-        active: {width: "calc(100% - 0.75rem)"} 
-    }
+    const variants = {
+        default: { width: 0 },
+        active: { width: "calc(100% - 0.75rem)" },
+    };
 
     return (
         <Sheet>
@@ -45,35 +49,35 @@ const MobileNav = () => {
                 {/* logo */}
                 <div className="mt-32 mb-40 text-center text-2xl">
                     <Link href="/">
-                        <h1 className="text-4xl font-semibold italic">
-                            SUNNY
-                        </h1>
+                        <h1 className="text-4xl font-semibold italic">SUNNY</h1>
                     </Link>
                 </div>
                 {/* nav */}
                 <nav className="flex flex-col justify-center items-center gap-8">
-                    {
-                        links.map((link, index) => 
-                            (                              
-                                <Link 
-                                    href={link.path} 
-                                    key={index} 
-                                    className={`${link.path === pathname && "text-accent"} font-medium hover:text-accent transition-all`}
-                                >
-                                    {link.name}
-                                    <motion.div 
-                                        variants={variants}
-                                        animate={link.path === pathname ? "acitve" : "default"}
-                                        className="border-b-2 border-accent"
-                                    />
-                                </Link>            
-                            )
-                        )
-                    }
+                    {links.map((link, index) => (
+                        <Link
+                            href={link.path}
+                            key={index}
+                            className={`${
+                                link.path === pathname && "text-accent"
+                            } font-medium hover:text-accent transition-all`}
+                        >
+                            {link.name}
+                            <motion.div
+                                variants={variants}
+                                animate={
+                                    link.path === pathname
+                                        ? "acitve"
+                                        : "default"
+                                }
+                                className="border-b-2 border-accent"
+                            />
+                        </Link>
+                    ))}
                 </nav>
             </SheetContent>
         </Sheet>
-    )
-}
+    );
+};
 
-export default MobileNav
+export default MobileNav;

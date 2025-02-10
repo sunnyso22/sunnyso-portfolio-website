@@ -17,7 +17,7 @@ export default function Home() {
         //     </div>
         //     <Footer/>
         // </main>
-        
+
         //v02
         <section className="h-full">
             <div className="container mx-auto h-full">
@@ -30,5 +30,5 @@ export default function Home() {
             </div>
             {/* <Stats /> */}
         </section>
-    )
+    );
 }

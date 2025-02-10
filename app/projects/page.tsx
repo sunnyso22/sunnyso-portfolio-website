@@ -1,25 +1,35 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/css"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
-import { BsArrowUpRight, BsGithub } from "react-icons/bs"
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
 
-import Link from "next/link"
-import Image from "next/image"
-import WorkSliderBtns from "@/components/WorkSliderBtns"
+import Link from "next/link";
+import Image from "next/image";
+import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
     {
         num: "01",
         title: "Weather App",
-        description: "A real-time weather app for people in Taiwan. Developed with React and styled-components. Built by Vite.",
-        stack: [{name: "Vite"}, {name: "React"}, {name: "styled-components"}],
+        description:
+            "A real-time weather app for people in Taiwan. Developed with React and styled-components. Built by Vite.",
+        stack: [
+            { name: "Vite" },
+            { name: "React" },
+            { name: "styled-components" },
+        ],
         image: "/images/projects/weather-app.png",
         live: "https://sunnyso22.github.io/weather-app-vite/",
         github: "https://github.com/sunnyso22/weather-app-vite",
@@ -27,34 +37,33 @@ const projects = [
     {
         num: "02",
         title: "Tailwind CSS Practice",
-        description: "Little project of creating calendar, progress bar, dark mode switch by Tailwind CSS.",
-        stack: [{name: "React"}, {name: "Tailwind CSS"}, ],
+        description:
+            "Little project of creating calendar, progress bar, dark mode switch by Tailwind CSS.",
+        stack: [{ name: "React" }, { name: "Tailwind CSS" }],
         image: "/images/projects/tailwind.png",
         live: "https://sunnyso22.github.io/vite-react-tailwind/",
         github: "https://github.com/sunnyso22/vite-react-tailwind",
     },
-]
+];
 
 type SwiperInstance = {
     activeIndex: number;
-}
+};
 
 const Projects = () => {
-
-    const [project, setProject] = useState(projects[0])
-
+    const [project, setProject] = useState(projects[0]);
 
     const handleSlideChange = (swiper: SwiperInstance) => {
         const currentIndex = swiper.activeIndex;
         setProject(projects[currentIndex]);
-    }
+    };
 
     return (
         <motion.section
-            initial={{opacity: 0}}
+            initial={{ opacity: 0 }}
             animate={{
-                opacity: 1, 
-                transition: {delay: 0.5, duration: 0.5, ease: "easeIn"}
+                opacity: 1,
+                transition: { delay: 0.5, duration: 0.5, ease: "easeIn" },
             }}
             className="min-h-[80vh] flex flex-col justify-center py-12 xl:px-0"
         >
@@ -63,15 +72,24 @@ const Projects = () => {
                     <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
                         <div className="flex flex-col gap-[30px] h-[50%]">
                             {/* num */}
-                            <div className="text-8xl leading-none font-extrabold">{project.num}</div>
+                            <div className="text-8xl leading-none font-extrabold">
+                                {project.num}
+                            </div>
                             {/* title */}
-                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.title}</h2>
+                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                                {project.title}
+                            </h2>
                             {/* description */}
-                            <p className="text-white/60">{project.description}</p>
+                            <p className="text-white/60">
+                                {project.description}
+                            </p>
                             {/* stack */}
                             <ul className="flex gap-4">
                                 {project.stack.map((item, index) => (
-                                    <li key={index} className="text-xl text-accent">
+                                    <li
+                                        key={index}
+                                        className="text-xl text-accent"
+                                    >
                                         {item.name}
                                     </li>
                                 ))}
@@ -85,7 +103,7 @@ const Projects = () => {
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                                <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
+                                                <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                                             </TooltipTrigger>
                                             <TooltipContent>
                                                 <p>Live Project</p>
@@ -98,7 +116,7 @@ const Projects = () => {
                                     <TooltipProvider delayDuration={100}>
                                         <Tooltip>
                                             <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                                <BsGithub className="text-white text-3xl group-hover:text-accent"/>
+                                                <BsGithub className="text-white text-3xl group-hover:text-accent" />
                                             </TooltipTrigger>
                                             <TooltipContent>
                                                 <p>Github repository</p>
@@ -123,7 +141,7 @@ const Projects = () => {
                                         <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                         {/* image */}
                                         <div className="relative w-full h-full">
-                                            <Image 
+                                            <Image
                                                 src={item.image}
                                                 fill
                                                 className="object-cover"
@@ -143,7 +161,7 @@ const Projects = () => {
                 </div>
             </div>
         </motion.section>
-    )
-}
+    );
+};
 
-export default Projects
+export default Projects;

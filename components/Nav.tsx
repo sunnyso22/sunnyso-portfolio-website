@@ -1,60 +1,56 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { motion } from "framer-motion"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const links = [
     {
         name: "Home",
-        path: "/"
+        path: "/",
     },
     {
         name: "About",
-        path: "/about"
+        path: "/about",
     },
     {
         name: "Projects",
-        path: "/projects"
+        path: "/projects",
     },
     {
         name: "Contact",
-        path: "/contact"
+        path: "/contact",
     },
-]
-
+];
 
 const Nav = () => {
+    const pathname = usePathname();
 
-    const pathname = usePathname()
-
-    const variants = { 
-        default: {width: 0}, 
-        active: {width: "calc(100% - 0.75rem)"} 
-    }
+    const variants = {
+        default: { width: 0 },
+        active: { width: "calc(100% - 0.75rem)" },
+    };
 
     return (
         <nav className="flex gap-8">
-            {   
-                links.map((link, index) => 
-                    (
-                        <Link 
-                            key={index} 
-                            href={link.path} 
-                            className={`${link.path === pathname && "text-accent"} font-medium hover:text-accent transition-all`}
-                        >
-                            {link.name}
-                            <motion.div 
-                                variants={variants}
-                                animate={link.path === pathname ? "acitve" : "default"}
-                                className="border-b-2 border-accent"
-                            />
-                        </Link>
-                    )
-                )
-            }
+            {links.map((link, index) => (
+                <Link
+                    key={index}
+                    href={link.path}
+                    className={`${
+                        link.path === pathname && "text-accent"
+                    } font-medium hover:text-accent transition-all`}
+                >
+                    {link.name}
+                    <motion.div
+                        variants={variants}
+                        animate={link.path === pathname ? "acitve" : "default"}
+                        className="border-b-2 border-accent"
+                    />
+                </Link>
+            ))}
         </nav>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;

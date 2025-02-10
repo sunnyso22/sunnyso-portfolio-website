@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import CountUp from "react-countup"
+import CountUp from "react-countup";
 
 const stats = [
     {
         num: 12,
-        text: "Years of experience"
+        text: "Years of experience",
     },
     {
         num: 26,
-        text: "Projects completed"
+        text: "Projects completed",
     },
     {
         num: 8,
-        text: "Technologies mastered"
+        text: "Technologies mastered",
     },
     {
         num: 500,
-        text: "Code commits"
+        text: "Code commits",
     },
-]
+];
 
 const Stats = () => {
     return (
@@ -27,15 +27,22 @@ const Stats = () => {
             <div className="container mx-auto">
                 <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
                     {stats.map((item, index) => (
-                        <div className="flex flex-1 gap-4 items-center justify-center xl:justify-start" key={index}>
-                            <CountUp 
+                        <div
+                            className="flex flex-1 gap-4 items-center justify-center xl:justify-start"
+                            key={index}
+                        >
+                            <CountUp
                                 end={item.num}
                                 duration={5}
                                 delay={2}
                                 className="text-4xl xl:text-6xl font-extrabold"
                             />
-                            <p 
-                                className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug text-white/80`}
+                            <p
+                                className={`${
+                                    item.text.length < 15
+                                        ? "max-w-[100px]"
+                                        : "max-w-[150px]"
+                                } leading-snug text-white/80`}
                             >
                                 {item.text}
                             </p>
@@ -44,7 +51,7 @@ const Stats = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
-export default Stats
+export default Stats;

@@ -1,9 +1,9 @@
-import Link from "next/link"
-import { Button } from "./ui/button"
+import Link from "next/link";
+import { Button } from "./ui/button";
 
 //components
-import Nav from "./Nav"
-import MobileNav from "./MobileNav"
+import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     return (
@@ -11,9 +11,7 @@ const Header = () => {
             <div className="container mx-auto flex justify-between items-center">
                 {/* logo */}
                 <Link href="/">
-                    <h1 className="text-4xl font-semibold italic">
-                        SUNNY
-                    </h1>
+                    <h1 className="text-4xl font-semibold italic">SUNNY</h1>
                 </Link>
 
                 {/* desktop nav & hire me button */}
@@ -30,7 +28,7 @@ const Header = () => {
                 </div>
             </div>
         </header>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

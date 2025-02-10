@@ -1,35 +1,42 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select";
 
-import React, { useState } from "react"
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa"
-import { motion } from "framer-motion"
+import React, { useState } from "react";
+import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const info = [
     {
         icon: <FaPhoneAlt />,
         title: "Phone",
-        description: "(+852) 6666 6666"
+        description: "(+852) 6666 6666",
     },
     {
         icon: <FaEnvelope />,
         title: "Email",
-        description: "noreply@sunnyso22.dev"
+        description: "noreply@sunnyso22.dev",
     },
     {
         icon: <FaMapMarkerAlt />,
         title: "Address",
-        description: "Kowloon, Hong Kong"
+        description: "Kowloon, Hong Kong",
     },
-]
+];
 
 const Contact = () => {
-
-    const [emailSubmitted, setEmailSubmitted] = useState(false)
+    const [emailSubmitted, setEmailSubmitted] = useState(false);
 
     type FormData = {
         firstname: string;
@@ -38,9 +45,11 @@ const Contact = () => {
         phone: string;
         subject: string;
         message: string;
-    }
+    };
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
+    const handleSubmit = async (
+        e: React.FormEvent<HTMLFormElement>
+    ): Promise<void> => {
         e.preventDefault();
 
         const data: FormData = {
@@ -72,13 +81,12 @@ const Contact = () => {
         });
     };
 
-
     return (
         <motion.section
-            initial={{opacity: 0}}
+            initial={{ opacity: 0 }}
             animate={{
-                opacity: 1, 
-                transition: {delay: 0.5, duration: 0.5, ease: "easeIn"}
+                opacity: 1,
+                transition: { delay: 0.5, duration: 0.5, ease: "easeIn" },
             }}
             className="py-6"
         >
@@ -86,18 +94,48 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:w-[60%] order-2 xl:order-none">
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-                            <h3 className="text-4xl text-accent font-medium">Let's Connect</h3>
-                            <p className="text-white/60">Please feel free to contact me, my inbox is always open.<br/>
-                            Whether you have question or just want to say hi, I will try my best to get back to you!</p>
+                        <form
+                            onSubmit={handleSubmit}
+                            className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
+                        >
+                            <h3 className="text-4xl text-accent font-medium">
+                                Let's Connect
+                            </h3>
+                            <p className="text-white/60">
+                                Please feel free to contact me, my inbox is
+                                always open.
+                                <br />
+                                Whether you have question or just want to say
+                                hi, I will try my best to get back to you!
+                            </p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input name="firstname" type="firstname" placeholder="First name" />
-                                <Input name="lastname" type="lastname" placeholder="Last name" />
-                                <Input name="email" type="email" placeholder="Email address" />
-                                <Input name="phone" type="phone" placeholder="Phone number" />
+                                <Input
+                                    name="firstname"
+                                    type="firstname"
+                                    placeholder="First name"
+                                />
+                                <Input
+                                    name="lastname"
+                                    type="lastname"
+                                    placeholder="Last name"
+                                />
+                                <Input
+                                    name="email"
+                                    type="email"
+                                    placeholder="Email address"
+                                />
+                                <Input
+                                    name="phone"
+                                    type="phone"
+                                    placeholder="Phone number"
+                                />
                             </div>
-                            <Input name="subject" type="subject" placeholder="Subject" />
+                            <Input
+                                name="subject"
+                                type="subject"
+                                placeholder="Subject"
+                            />
                             {/* select */}
                             {/* <Select>
                                 <SelectTrigger className="w-full">
@@ -113,7 +151,7 @@ const Contact = () => {
                                 </SelectContent>
                             </Select> */}
                             {/* textarea */}
-                            <Textarea 
+                            <Textarea
                                 name="message"
                                 className="h-[200px]"
                                 placeholder="Type your message here."
@@ -123,13 +161,11 @@ const Contact = () => {
                                 <Button size="md" className="max-w-40">
                                     Send Message
                                 </Button>
-                                {
-                                    emailSubmitted && (
-                                        <p className="text-green-500 test-sm mt-2">
-                                            Email sent successfully!
-                                        </p>
-                                    )
-                                }
+                                {emailSubmitted && (
+                                    <p className="text-green-500 test-sm mt-2">
+                                        Email sent successfully!
+                                    </p>
+                                )}
                             </div>
                         </form>
                     </div>
@@ -152,7 +188,7 @@ const Contact = () => {
                 </div>
             </div>
         </motion.section>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;

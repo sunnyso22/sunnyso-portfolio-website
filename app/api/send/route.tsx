@@ -1,12 +1,23 @@
-import React from 'react';
-import { Resend } from 'resend';
+import React from "react";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const fromEmail = process.env.FROM_EMAIL || 'default@example.com';
+const fromEmail = process.env.FROM_EMAIL || "default@example.com";
 
 export async function POST(req: Request) {
-
-    const { firstname, lastname, email, subject, message }: { firstname: string, lastname: string, email: string, subject: string, message: string } = await req.json();
+    const {
+        firstname,
+        lastname,
+        email,
+        subject,
+        message,
+    }: {
+        firstname: string;
+        lastname: string;
+        email: string;
+        subject: string;
+        message: string;
+    } = await req.json();
 
     try {
         const { data, error } = await resend.emails.send({
@@ -16,7 +27,9 @@ export async function POST(req: Request) {
             subject: subject,
             react: (
                 <div>
-                    <p>Dear {firstname} {lastname},</p>
+                    <p>
+                        Dear {firstname} {lastname},
+                    </p>
                     <h1>Thank you for contacting me!</h1>
                     <p>New message submitted: </p>
                     <p>{message}</p>
@@ -29,8 +42,7 @@ export async function POST(req: Request) {
         }
 
         return Response.json(data);
-    } 
-    catch (error) {
+    } catch (error) {
         return Response.json({ error }, { status: 500 });
     }
 }

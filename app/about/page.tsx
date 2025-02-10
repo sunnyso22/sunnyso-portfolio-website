@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa"
-import { SiTailwindcss, SiNextdotjs, SiMysql, SiOracle } from "react-icons/si"
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiMysql, SiOracle } from "react-icons/si";
 
 const about = {
     title: "About me",
-    description: "Hi, my name is SO Hiu Tung, you can simply call me Sunny. I am a web developer and solution analyst with over 3 years of experience, based in Hong Kong. As a quick learner, I am always eager to expand my knowledge and skill set. I thrive in collaborative environments and enjoy working with others to create innovative and impactful applications.",
+    description:
+        "Hi, my name is SO Hiu Tung, you can simply call me Sunny. I am a web developer and solution analyst with over 3 years of experience, based in Hong Kong. As a quick learner, I am always eager to expand my knowledge and skill set. I thrive in collaborative environments and enjoy working with others to create innovative and impactful applications.",
     info: [
         {
             fieldName: "Name",
@@ -23,49 +24,52 @@ const about = {
             fieldName: "Languages",
             fieldValue: "Cantonese, Mandarin, English",
         },
-    ]
-}
+    ],
+};
 
 const experience = {
     icon: "",
     title: "My experience",
-    description: "I joined Cathay Dining, a subsidiary of Cathay Pacific Airways, as an IT Trainee in July 2021. In August 2023, following the reorganization of Cathay's subsidiary IT departments, I was promoted to the position of Solution Specialist at Cathay Pacific Airways. ",
+    description:
+        "I joined Cathay Dining, a subsidiary of Cathay Pacific Airways, as an IT Trainee in July 2021. In August 2023, following the reorganization of Cathay's subsidiary IT departments, I was promoted to the position of Solution Specialist at Cathay Pacific Airways. ",
     items: [
         {
             company: "Cathay Pacific Airways",
             position: "Solution Specialist",
-            duration: "2023Aug - 2024Jul"
+            duration: "2023Aug - 2024Jul",
         },
         {
             company: "Cathay Dining",
             position: "IT Trainee",
-            duration: "2021Jul - 2023Jul"
+            duration: "2021Jul - 2023Jul",
         },
         {
-            company: "Office of the Government Chief Information Officer (OGCIO)",
+            company:
+                "Office of the Government Chief Information Officer (OGCIO)",
             position: "Intern",
-            duration: "2020Jul - 2020Aug"
+            duration: "2020Jul - 2020Aug",
         },
-    ]
-}
+    ],
+};
 
 const education = {
     icon: "",
     title: "Education",
-    description: "Obtained the bachelor degree of Information Technology from The Hong Kong Polytechnic University in 2021.",
+    description:
+        "Obtained the bachelor degree of Information Technology from The Hong Kong Polytechnic University in 2021.",
     items: [
         {
             institution: "The Hong Kong Polytechnic University",
             degree: "BSc (Hons) Information Technology",
-            duration: "2017-2021"
+            duration: "2017-2021",
         },
         {
             institution: "EPF Engineering School",
             degree: "Exchange Student",
-            duration: "2020Jan-2020Jun"
+            duration: "2020Jan-2020Jun",
         },
-    ]
-}
+    ],
+};
 
 const skills = {
     title: "My skills",
@@ -73,27 +77,27 @@ const skills = {
     skillList: [
         {
             icon: <FaHtml5 />,
-            name: "HTML"
+            name: "HTML",
         },
         {
             icon: <FaCss3 />,
-            name: "CSS"
+            name: "CSS",
         },
         {
             icon: <FaJs />,
-            name: "JavaScript"
+            name: "JavaScript",
         },
         {
             icon: <FaReact />,
-            name: "React"
+            name: "React",
         },
         {
             icon: <FaNodeJs />,
-            name: "Node.js"
+            name: "Node.js",
         },
         {
             icon: <SiTailwindcss />,
-            name: "Tailwind CSS"
+            name: "Tailwind CSS",
         },
         // {
         //     icon: <SiNextdotjs />,
@@ -101,32 +105,37 @@ const skills = {
         // },
         {
             icon: <SiMysql />,
-            name: "MySQL"
+            name: "MySQL",
         },
         {
             icon: <SiOracle />,
-            name: "Oracle"
+            name: "Oracle",
         },
-    ]
-}
+    ],
+};
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { motion } from "framer-motion"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { motion } from "framer-motion";
 
 const About = () => {
     return (
         <motion.div
-            initial={{opacity: 0}}
+            initial={{ opacity: 0 }}
             animate={{
                 opacity: 1,
-                transition: {delay: 0.5, duration: 0.5, ease: "easeIn"}
+                transition: { delay: 0.5, duration: 0.5, ease: "easeIn" },
             }}
             className="min-h-[80vh] flex items-center justify-center py-12 xl:px-0"
         >
             <div className="container mx-auto">
-                <Tabs 
+                <Tabs
                     defaultValue="about"
                     className="flex flex-col xl:flex-row gap-[60px]"
                 >
@@ -140,16 +149,30 @@ const About = () => {
                     {/* content */}
                     <div className="min-h-[80vh] w-full">
                         {/* about */}
-                        <TabsContent value="about" className="w-full text-center xl:text-left">
+                        <TabsContent
+                            value="about"
+                            className="w-full text-center xl:text-left"
+                        >
                             <div className="flex flex-col gap-[30px]">
-                                <h3 className="text-4xl font-bold">{about.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
+                                <h3 className="text-4xl font-bold">
+                                    {about.title}
+                                </h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                    {about.description}
+                                </p>
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                                         {about.info.map((item, index) => (
-                                            <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
-                                                <span className="text-white/60">{item.fieldName}</span>
-                                                <span className="text-lg">{item.fieldValue}</span>
+                                            <li
+                                                key={index}
+                                                className="flex items-center justify-center xl:justify-start gap-4"
+                                            >
+                                                <span className="text-white/60">
+                                                    {item.fieldName}
+                                                </span>
+                                                <span className="text-lg">
+                                                    {item.fieldValue}
+                                                </span>
                                             </li>
                                         ))}
                                     </ul>
@@ -160,18 +183,31 @@ const About = () => {
                         {/* education */}
                         <TabsContent value="education" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{education.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{education.description}</p>
+                                <h3 className="text-4xl font-bold">
+                                    {education.title}
+                                </h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                    {education.description}
+                                </p>
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {education.items.map((item, index) => (
-                                            <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                                                <span className="text-accent">{item.duration}</span>
-                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
+                                            <li
+                                                key={index}
+                                                className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                            >
+                                                <span className="text-accent">
+                                                    {item.duration}
+                                                </span>
+                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    {item.degree}
+                                                </h3>
                                                 <div className="flex items-center gap-3">
                                                     {/* dot */}
                                                     <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                    <p className="text-white/60">{item.institution}</p>
+                                                    <p className="text-white/60">
+                                                        {item.institution}
+                                                    </p>
                                                 </div>
                                             </li>
                                         ))}
@@ -183,18 +219,31 @@ const About = () => {
                         {/* experience */}
                         <TabsContent value="experience" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                <h3 className="text-4xl font-bold">{experience.title}</h3>
-                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{experience.description}</p>
+                                <h3 className="text-4xl font-bold">
+                                    {experience.title}
+                                </h3>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                    {experience.description}
+                                </p>
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                                         {experience.items.map((item, index) => (
-                                            <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
-                                                <span className="text-accent">{item.duration}</span>
-                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
+                                            <li
+                                                key={index}
+                                                className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                            >
+                                                <span className="text-accent">
+                                                    {item.duration}
+                                                </span>
+                                                <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    {item.position}
+                                                </h3>
                                                 <div className="flex items-center gap-3">
                                                     {/* dot */}
                                                     <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                    <p className="text-white/60">{item.company}</p>
+                                                    <p className="text-white/60">
+                                                        {item.company}
+                                                    </p>
                                                 </div>
                                             </li>
                                         ))}
@@ -207,16 +256,24 @@ const About = () => {
                         <TabsContent value="skills" className="w-full h-full">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                                    <h3 className="text-4xl font-bold">
+                                        {skills.title}
+                                    </h3>
+                                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                        {skills.description}
+                                    </p>
                                 </div>
                                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
                                     {skills.skillList.map((item, index) => (
                                         <li key={index}>
-                                            <TooltipProvider delayDuration={100}>
+                                            <TooltipProvider
+                                                delayDuration={100}
+                                            >
                                                 <Tooltip>
                                                     <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300">{item.icon}</div>
+                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                                            {item.icon}
+                                                        </div>
                                                     </TooltipTrigger>
                                                     <TooltipContent>
                                                         <p>{item.name}</p>
@@ -232,7 +289,7 @@ const About = () => {
                 </Tabs>
             </div>
         </motion.div>
-    )
-}
+    );
+};
 
-export default About
+export default About;
