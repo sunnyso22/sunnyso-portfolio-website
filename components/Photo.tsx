@@ -15,7 +15,7 @@ const Photo = () => {
                 className="w-full h-full relative"
             >
                 {/* image */}
-                <div className="w-[258px] h-[258px] xl:w-[438px] xl:h-[438px] absolute left-[50%] top-[50%] -translate-y-1/2 -translate-x-1/2 mix-blend-lighten">
+                <div className="w-[258px] h-[258px] xl:w-[438px] xl:h-[438px] absolute left-[50%] top-[50%] -translate-y-1/2 -translate-x-1/2 mix-blend-plus-lighter">
                     <Image
                         src="/images/sunnyso.png"
                         priority
