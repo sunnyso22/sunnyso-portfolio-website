@@ -38,11 +38,26 @@ const projects = [
         num: "02",
         title: "Tailwind CSS Practice",
         description:
-            "Little project of creating calendar, progress bar, dark mode switch by Tailwind CSS.",
+            "Little project of creating calendar, progress bar, dark mode switch and more tools by Tailwind CSS.",
         stack: [{ name: "React" }, { name: "Tailwind CSS" }],
         image: "/images/projects/tailwind.png",
         live: "https://sunnyso22.github.io/vite-react-tailwind/",
         github: "https://github.com/sunnyso22/vite-react-tailwind",
+    },
+    {
+        num: "03",
+        title: "Cookery",
+        description:
+            "Cookery is a recipe sharing website built by Next.js + MongoDB. Deployed by Vercel.",
+        stack: [
+            { name: "Next.js" },
+            { name: "MongoDB" },
+            { name: "shadcn/ui" },
+            { name: "Vercel" },
+        ],
+        image: "/images/projects/cookery.png",
+        live: "https://cookery.sunnyso22.dev/",
+        github: "https://github.com/sunnyso22/recipe-sharing-app",
     },
 ];
 

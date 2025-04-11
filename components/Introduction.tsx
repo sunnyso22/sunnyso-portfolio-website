@@ -27,7 +27,7 @@ const Introduction = () => {
                         1000,
                         "Web Developer",
                         1000,
-                        "Solution Analyst",
+                        "Solution Specialist",
                         1000,
                     ]}
                     wrapper="span"
@@ -37,23 +37,23 @@ const Introduction = () => {
                 />
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-                A full stack web developer with a passion for creating
-                interactive and responsive web applications. Experienced working
-                with JavaScript, React, Node.js, Tailwind CSS.
+                A dedicated software engineer who thrives on understanding your
+                needs and building tailored solutions. Experienced working with
+                PHP, JavaScript, React, Tailwind CSS, MySQL, and Oracle PL/SQL.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-                <Button
+                {/* <Button
                     variant="outline"
                     size="lg"
                     className="flex items-center gap-2 hover:transition-all duration-500"
                 >
                     <span>Download CV</span>
                     <ArrowDownTrayIcon className="w-5" />
-                </Button>
+                </Button> */}
                 <div className="mb-8 xl:mb-0">
                     <Socials
                         containerStyles="flex gap-6"
-                        iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                        iconStyles="w-12 h-12 border border-accent rounded-full flex justify-center items-center text-accent text-2xl hover:bg-accent hover:text-primary hover:transition-all duration-500"
                     />
                 </div>
             </div>

@@ -1,12 +1,26 @@
 "use client";
 
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiMysql, SiOracle } from "react-icons/si";
+import {
+    FaHtml5,
+    FaCss3,
+    FaJs,
+    FaReact,
+    FaNodeJs,
+    FaGitAlt,
+} from "react-icons/fa";
+import {
+    SiTailwindcss,
+    SiNextdotjs,
+    SiMysql,
+    SiOracle,
+    SiPhp,
+} from "react-icons/si";
+import { BiLogoTypescript } from "react-icons/bi";
 
 const about = {
     title: "About me",
     description:
-        "Hi, my name is SO Hiu Tung, you can simply call me Sunny. I am a web developer and solution analyst with over 3 years of experience, based in Hong Kong. As a quick learner, I am always eager to expand my knowledge and skill set. I thrive in collaborative environments and enjoy working with others to create innovative and impactful applications.",
+        "Hi, my name is SO Hiu Tung, you can simply call me Sunny. I am a web developer and solution specialist with over 3 years of experience, based in Hong Kong. As a quick learner, I am always eager to expand my knowledge and skill set. I thrive in collaborative environments and enjoy working with others to create innovative and impactful applications.",
     info: [
         {
             fieldName: "Name",
@@ -28,7 +42,6 @@ const about = {
 };
 
 const experience = {
-    icon: "",
     title: "My experience",
     description:
         "I joined Cathay Dining, a subsidiary of Cathay Pacific Airways, as an IT Trainee in July 2021. In August 2023, following the reorganization of Cathay's subsidiary IT departments, I was promoted to the position of Solution Specialist at Cathay Pacific Airways. ",
@@ -36,24 +49,23 @@ const experience = {
         {
             company: "Cathay Pacific Airways",
             position: "Solution Specialist",
-            duration: "2023Aug - 2024Jul",
+            duration: "Aug2023 - Jul2024",
         },
         {
             company: "Cathay Dining",
             position: "IT Trainee",
-            duration: "2021Jul - 2023Jul",
+            duration: "Jul2021 - Jul2023",
         },
         {
             company:
                 "Office of the Government Chief Information Officer (OGCIO)",
             position: "Intern",
-            duration: "2020Jul - 2020Aug",
+            duration: "Jul2020 - Aug2020",
         },
     ],
 };
 
 const education = {
-    icon: "",
     title: "Education",
     description:
         "Obtained the bachelor degree of Information Technology from The Hong Kong Polytechnic University in 2021.",
@@ -88,21 +100,29 @@ const skills = {
             name: "JavaScript",
         },
         {
+            icon: <SiPhp />,
+            name: "PHP",
+        },
+        {
             icon: <FaReact />,
             name: "React",
+        },
+        {
+            icon: <BiLogoTypescript />,
+            name: "TypeScript",
+        },
+        {
+            icon: <SiTailwindcss />,
+            name: "Tailwind CSS",
         },
         {
             icon: <FaNodeJs />,
             name: "Node.js",
         },
         {
-            icon: <SiTailwindcss />,
-            name: "Tailwind CSS",
+            icon: <SiNextdotjs />,
+            name: "Next.js",
         },
-        // {
-        //     icon: <SiNextdotjs />,
-        //     name: "Next.js"
-        // },
         {
             icon: <SiMysql />,
             name: "MySQL",
@@ -110,6 +130,10 @@ const skills = {
         {
             icon: <SiOracle />,
             name: "Oracle",
+        },
+        {
+            icon: <FaGitAlt />,
+            name: "Git",
         },
     ],
 };
