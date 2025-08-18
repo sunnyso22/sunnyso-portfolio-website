@@ -23,7 +23,7 @@ export async function POST(req: Request) {
         const { data, error } = await resend.emails.send({
             from: fromEmail,
             to: [email],
-            bcc: ["sohiutung123456@yahoo.com.hk"],
+            bcc: ["sunnyso22@myyahoo.com"],
             subject: subject,
             react: (
                 <div>

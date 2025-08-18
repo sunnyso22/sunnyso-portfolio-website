@@ -16,6 +16,7 @@ import {
 import React, { useState } from "react";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { Loader2 } from "lucide-react";
 
 const info = [
     {
@@ -37,6 +38,7 @@ const info = [
 
 const Contact = () => {
     const [emailSubmitted, setEmailSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     type FormData = {
         firstname: string;
@@ -51,6 +53,7 @@ const Contact = () => {
         e: React.FormEvent<HTMLFormElement>
     ): Promise<void> => {
         e.preventDefault();
+        setLoading(true);
 
         const data: FormData = {
             firstname: e.currentTarget.firstname.value,
@@ -77,6 +80,7 @@ const Contact = () => {
             if (response.status === 200) {
                 console.log("Message sent.");
                 setEmailSubmitted(true);
+                setLoading(false);
             }
         });
     };
@@ -158,8 +162,17 @@ const Contact = () => {
                             />
                             {/* button */}
                             <div className="flex flex-row gap-5">
-                                <Button size="md" className="max-w-40">
-                                    Send Message
+                                <Button
+                                    size="md"
+                                    type="submit"
+                                    className="max-w-40 cursor-pointer"
+                                    disabled={loading}
+                                >
+                                    {loading ? (
+                                        <Loader2 className="animate-spin" />
+                                    ) : (
+                                        "Send Message"
+                                    )}
                                 </Button>
                                 {emailSubmitted && (
                                     <p className="text-green-500 test-sm mt-2">
