@@ -50,7 +50,7 @@ const Contact = () => {
     };
 
     const handleSubmit = async (
-        e: React.FormEvent<HTMLFormElement>
+        e: React.SubmitEvent<HTMLFormElement>
     ): Promise<void> => {
         e.preventDefault();
         setLoading(true);
@@ -95,9 +95,9 @@ const Contact = () => {
             className="py-6"
         >
             <div className="container mx-auto">
-                <div className="flex flex-col xl:flex-row gap-[30px]">
+                <div className="flex flex-col xl:flex-row gap-7.5">
                     {/* form */}
-                    <div className="xl:w-[60%] order-2 xl:order-none">
+                    <div className="xl:w-[60%] order-2 xl:order-0">
                         <form
                             onSubmit={handleSubmit}
                             className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
@@ -157,11 +157,11 @@ const Contact = () => {
                             {/* textarea */}
                             <Textarea
                                 name="message"
-                                className="h-[200px]"
+                                className="h-50"
                                 placeholder="Type your message here."
                             />
                             {/* button */}
-                            <div className="flex flex-row gap-5">
+                            {/* <div className="flex flex-row gap-5">
                                 <Button
                                     size="md"
                                     type="submit"
@@ -179,7 +179,7 @@ const Contact = () => {
                                         Email sent successfully!
                                     </p>
                                 )}
-                            </div>
+                            </div> */}
                         </form>
                     </div>
                     {/* info */}

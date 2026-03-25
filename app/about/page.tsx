@@ -8,13 +8,7 @@ import {
     FaNodeJs,
     FaGitAlt,
 } from "react-icons/fa";
-import {
-    SiTailwindcss,
-    SiNextdotjs,
-    SiMysql,
-    SiOracle,
-    SiPhp,
-} from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiMysql, SiPhp } from "react-icons/si";
 import { BiLogoTypescript } from "react-icons/bi";
 
 const about = {
@@ -126,10 +120,6 @@ const skills = {
         {
             icon: <SiMysql />,
             name: "MySQL",
-        },
-        {
-            icon: <SiOracle />,
-            name: "Oracle",
         },
         {
             icon: <FaGitAlt />,
