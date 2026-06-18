@@ -22,30 +22,6 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
     {
         num: "01",
-        title: "Weather App",
-        description:
-            "A real-time weather app for people in Taiwan. Developed with React and styled-components. Built by Vite.",
-        stack: [
-            { name: "Vite" },
-            { name: "React" },
-            { name: "styled-components" },
-        ],
-        image: "/images/projects/weather-app.png",
-        live: "https://sunnyso22.github.io/weather-app-vite/",
-        github: "https://github.com/sunnyso22/weather-app-vite",
-    },
-    {
-        num: "02",
-        title: "Tailwind CSS Practice",
-        description:
-            "Little project of creating calendar, progress bar, dark mode switch and more tools by Tailwind CSS.",
-        stack: [{ name: "React" }, { name: "Tailwind CSS" }],
-        image: "/images/projects/tailwind.png",
-        live: "https://sunnyso22.github.io/vite-react-tailwind/",
-        github: "https://github.com/sunnyso22/vite-react-tailwind",
-    },
-    {
-        num: "03",
         title: "Cookery",
         description:
             "Cookery is a recipe sharing website built by Next.js + MongoDB. Deployed by Vercel.",
@@ -58,6 +34,33 @@ const projects = [
         image: "/images/projects/cookery.png",
         live: "https://cookery.sunnyso22.dev/",
         github: "https://github.com/sunnyso22/recipe-sharing-app",
+    },
+    {
+        num: "02",
+        title: "Gigent",
+        description:
+            "Gigent makes AI agents verifiable with trusted execution environments. Built by Next.js + Vercel AI SDK.",
+        stack: [
+            { name: "Next.js" },
+            { name: "Vercel AI SDK" },
+        ],
+        image: "/images/projects/gigent.png",
+        live: "/pdf/gigent-pitch-deck.pdf",
+        github: "https://github.com/sunnyso22/gigent",
+    },
+    {
+        num: "03",
+        title: "Weather App",
+        description:
+            "A real-time weather app for people in Taiwan. Developed with React and styled-components. Built by Vite.",
+        stack: [
+            { name: "Vite" },
+            { name: "React" },
+            { name: "styled-components" },
+        ],
+        image: "/images/projects/weather-app.png",
+        live: "https://sunnyso22.github.io/weather-app-vite/",
+        github: "https://github.com/sunnyso22/weather-app-vite",
     },
 ];
 

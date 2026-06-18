@@ -27,7 +27,7 @@ const Introduction = () => {
                         1000,
                         "Web Developer",
                         1000,
-                        "Solution Specialist",
+                        "Software Engineer",
                         1000,
                     ]}
                     wrapper="span"
@@ -39,7 +39,7 @@ const Introduction = () => {
             <p className="max-w-[500px] mb-9 text-white/80">
                 A dedicated software engineer who thrives on understanding your
                 needs and building tailored solutions. Experienced working with
-                PHP, JavaScript, React, Tailwind CSS, MySQL, and Oracle PL/SQL.
+                TypeScript, React, Next.js, PostgreSQL.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
                 {/* <Button
